@@ -1,4 +1,7 @@
 console.log(`Wassup World?!`);
+// Global Variables
+let totalMonthlyCost = 1666.67;
+let monthlySpan = document.querySelector('.total-monthly');
 
 // function to pull information from user input on submit
 function submitForm(event) {
@@ -12,8 +15,9 @@ function submitForm(event) {
     let annualSal = Number(document.querySelector('#salaryInput').value);
     // store monthly calculations
     let monthlyCost = annualSal / 12;
-
-        //! parseFloat(var.toFixed(2)); will round to the second decimal place, as indicated by the 2
+    totalMonthlyCost += monthlyCost;
+    monthlySpan.innerHTML = `${totalMonthlyCost.toFixed(2)}`;
+    //! parseFloat(var.toFixed(2)); will round to the second decimal place, as indicated by the 2
     employeeDiv.innerHTML += `
         <tr>
             <td>${lastName}</td>
@@ -25,4 +29,7 @@ function submitForm(event) {
             <td><button id="delete-button" onclick="deleteRow(event)" >Delete</button></td>
         </tr>
     `
+    if (monthlyCost > 20000) {
+        
+    }
 }
