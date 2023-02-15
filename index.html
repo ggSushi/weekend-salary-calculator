@@ -14,14 +14,38 @@
     <div id="formDiv">
         <h2>Employee Info</h2>
         <form class="employment-info" onSubmit="submitForm(event)">
-            First Name: <input id="firstNameInput" type="text"><br>
-            Last Name: <input id="lastNameInput" type="text"><br>
-            ID No.: <input id="idInput" type="text"><br>
-            Job Title: <input id="jobTitleInput" type="text"><br>
-            Annual Salary: <input id="salaryInput" type="number"><br>
+            First Name: <input id="firstNameInput" type="text" required><br>
+            Last Name: <input id="lastNameInput" type="text" required><br>
+            ID No.: <input id="idInput" type="text" required><br>
+            Job Title: <input id="jobTitleInput" type="text" required><br>
+            Annual Salary: <input id="salaryInput" type="number" required><br>
             <input type="submit" value="Submit Info">
         </form>
     </div>
+    <table id="employee-table">
+        <thead>
+            <tr>
+                <th>Last Name</th>
+                <th>First Name</th>
+                <th>ID No.</th>
+                <th>Job Title</th>
+                <th>Annual Salary</th>
+                <th>Monthly Cost</th>
+            </tr>
+        </thead>
+        <tbody id="employee-list">
+            <tr>
+                <td>Dimapilis</td>
+                <td>Glonel</td>
+                <td>9016218</td>
+                <td>Student</td>
+                <td>20000</td>
+                <td>1666.67</td>
+                <td><button id="delete-button" onclick="deleteRow(event)" >Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+
     <script src="client.js"></script>
 </body>
 </html>
