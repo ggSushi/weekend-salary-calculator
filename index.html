@@ -15,11 +15,11 @@
         <h2>Employee Info</h2>
         <!-- You can add two different functions to one onclick/ onsubmit -->
         <form class="employment-info" onSubmit="submitForm(event); clearInput(event)">
-            First Name: <input id="firstNameInput" type="text" required><br>
-            Last Name: <input id="lastNameInput" type="text" required><br>
-            ID No.: <input id="idInput" type="text" required><br>
-            Job Title: <input id="jobTitleInput" type="text" required><br>
-            Annual Salary: <input id="salaryInput" type="number" required><br>
+            First Name: <input id="firstNameInput" type="text" ><br>
+            Last Name: <input id="lastNameInput" type="text" ><br>
+            ID No.: <input id="idInput" type="text" ><br>
+            Job Title: <input id="jobTitleInput" type="text" ><br>
+            Annual Salary: <input id="salaryInput" type="number" ><br>
             <input type="submit" value="Submit Info">
         </form>
     </div>
@@ -46,7 +46,7 @@
                 <td>9016218</td>
                 <td>Student</td>
                 <td>20000</td>
-                <td>1666.67</td>
+                <td class="cost">1666.67</td>
                 <td><button id="delete-button" onclick="deleteRow(event)" >Delete</button></td>
             </tr>
         </tbody>
