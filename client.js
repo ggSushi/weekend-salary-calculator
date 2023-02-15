@@ -4,7 +4,7 @@ let totalMonthlyCost = 1666.67;
 let monthlySpan = document.querySelector('.starting-monthly');
 let monthlyDiv = document.querySelector('#total-monthly');
 
-// function to pull information from user input on submit on the form
+//TODO function to pull information from user input on submit on the form
 function submitForm(event) {
     event.preventDefault();
 
@@ -38,27 +38,40 @@ function submitForm(event) {
     if (totalMonthlyCost > 20000) {
         monthlyDiv.style.backgroundColor = "red";
     }
-}
+} 
 
-// This function will delete the row and subtract from the total monthly cost
+//TODO This function will delete the row and subtract from the total monthly cost
 function deleteRow(event) {
+    //! setting a var equal to the value of the previous Element sibling, which is the monthly cost for that employee
     let cost = event.target.parentElement.previousElementSibling;
     console.log(cost);
+    //! converts the innerHTML of that element into a number
     let subCost = Number(cost.innerHTML);
     console.log(subCost);
+    //! subtracts that number from the totalMonthlyCost to give an accurate amount
     totalMonthlyCost -= subCost;
 
+    // this will make sure that if the totalMonthlyCost is less than 0, it will set it back to 0 instead
+    if (totalMonthlyCost < 0) {
+        totalMonthlyCost = 0;
+    }
+
+    // displays the totalMonthlyCost onto the DOM
     monthlySpan.innerHTML = `${totalMonthlyCost.toFixed(2)}`;
-    event.target.parentElement.parentElement.remove();
+
+    // checks to see if removing the employee will lower totalMonthlyCost
+    // this will change color back if ocndition is met
     if (totalMonthlyCost < 20000) {
         //! setting color to "transparent" or "initial" will clear the color to its default state"
         monthlyDiv.style.backgroundColor = "initial";
     }
+    // removes the entire tr that holds all of that employee's info
+    event.target.parentElement.parentElement.remove();
 }
 
 //! You can add two different functions two a single onClick or onSubmit event
-// function to clear the input fields after submit in the form
+//TODO function to clear the input fields after submit in the form
 function clearInput(event) {
-    //! .reset() is a funciton that will reset all input fields inside of a form
+    //! .reset() is a function that will reset all input fields inside of a form
     event.target.reset();
 }
