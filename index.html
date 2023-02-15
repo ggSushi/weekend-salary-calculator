@@ -11,6 +11,17 @@
     <header>
         <h1 class="heading-title">Weekend Salary Calculator</h1>
     </header>
+    <div id="formDiv">
+        <h2>Employee Info</h2>
+        <form class="employment-info" onSubmit="submitForm(event)">
+            First Name: <input id="firstNameInput" type="text"><br>
+            Last Name: <input id="lastNameInput" type="text"><br>
+            ID No.: <input id="idInput" type="text"><br>
+            Job Title: <input id="jobTitleInput" type="text"><br>
+            Annual Salary: <input id="salaryInput" type="number"><br>
+            <input type="submit" value="Submit Info">
+        </form>
+    </div>
     <script src="client.js"></script>
 </body>
 </html>
