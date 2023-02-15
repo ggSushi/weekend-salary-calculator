@@ -13,6 +13,7 @@ function submitForm(event) {
     // store monthly calculations
     let monthlyCost = annualSal / 12;
 
+        //! parseFloat(var.toFixed(2)); will round to the second decimal place, as indicated by the 2
     employeeDiv.innerHTML += `
         <tr>
             <td>${lastName}</td>
@@ -20,7 +21,7 @@ function submitForm(event) {
             <td>${idNumber}</td>
             <td>${jobTitle}</td>
             <td>${annualSal}</td>
-            <td>${monthlyCost}</td>
+            <td>${parseFloat(monthlyCost.toFixed(2))}</td>
             <td><button id="delete-button" onclick="deleteRow(event)" >Delete</button></td>
         </tr>
     `
