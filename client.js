@@ -8,7 +8,7 @@ let monthlyDiv = document.querySelector('#total-monthly');
 // function to pull information from user input on submit
 function submitForm(event) {
     event.preventDefault();
-    
+
     // storing inputs into variables
     let employeeDiv = document.querySelector('#employee-list');
     let firstName = document.querySelector('#firstNameInput').value;
@@ -31,7 +31,7 @@ function submitForm(event) {
             <td>${idNumber}</td>
             <td>${jobTitle}</td>
             <td>${annualSal}</td>
-            <td>${parseFloat(monthlyCost.toFixed(2))}</td>
+            <td class="employee-cost">${parseFloat(monthlyCost.toFixed(2))}</td>
             <td><button id="delete-button" onclick="deleteRow(event)" >Delete</button></td>
         </tr>
     `  
@@ -41,3 +41,7 @@ function submitForm(event) {
     }
 }
 
+// This function will delete the row and subtract from the total monthly cost
+function deleteRow(event) {
+    event.target.parentElement.parentElement.remove();
+}
