@@ -37,6 +37,7 @@ function submitForm(event) {
     // This will change the bg color of the total monthly cost div to red if it exceeds 20000
     if (totalMonthlyCost > 20000) {
         monthlyDiv.style.backgroundColor = "red";
+        monthlyDiv.style.color = "white";
     }
 } 
 
@@ -64,6 +65,7 @@ function deleteRow(event) {
     if (totalMonthlyCost < 20000) {
         //! setting color to "transparent" or "initial" will clear the color to its default state"
         monthlyDiv.style.backgroundColor = "initial";
+        monthlyDiv.style.color = "initial";
     }
     // removes the entire tr that holds all of that employee's info
     event.target.parentElement.parentElement.remove();
