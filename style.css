@@ -1,3 +1,26 @@
-.heading-title {
-    font-style: italic;
+html,
+body {
+    /* the margin in the html and body will stretch 
+    to the very edge of the DOM */
+    margin: 0;
+    padding: 0;
 }
+
+header {
+    font-style: italic;
+    text-align: center;
+    background-color:rgb(43, 101, 226);
+    color:rgb(255, 254, 221);
+    padding: 6px 32px;
+}
+
+#formDiv, #total-monthly {
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+}
+
+#employee-table {
+    margin: auto;
+}
+
