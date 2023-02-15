@@ -45,7 +45,13 @@ function submitForm(event) {
 function deleteRow(event) {
     event.target.parentElement.parentElement.remove();
     if (totalMonthlyCost < 20000) {
-        // setting color to "transparent will clear the color to its default state"
-        monthlyDiv.style.backgroundColor = "transparent";
+        //! setting color to "transparent" or "initial" will clear the color to its default state"
+        monthlyDiv.style.backgroundColor = "initial";
     }
+}
+
+// function to clear the input fields after submit
+function clearInput(event) {
+    //! .reset() is a funciton that will reset all input fields inside of a form
+    event.target.reset();
 }

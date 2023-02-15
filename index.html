@@ -13,7 +13,7 @@
     </header>
     <div id="formDiv">
         <h2>Employee Info</h2>
-        <form class="employment-info" onSubmit="submitForm(event)">
+        <form class="employment-info" onSubmit="submitForm(event); clearInput(event)">
             First Name: <input id="firstNameInput" type="text" required><br>
             Last Name: <input id="lastNameInput" type="text" required><br>
             ID No.: <input id="idInput" type="text" required><br>
@@ -45,7 +45,7 @@
                 <td>9016218</td>
                 <td>Student</td>
                 <td>20000</td>
-                <td class="cost">1666.67</td>
+                <td>1666.67</td>
                 <td><button id="delete-button" onclick="deleteRow(event)" >Delete</button></td>
             </tr>
         </tbody>
