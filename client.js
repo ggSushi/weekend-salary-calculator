@@ -24,7 +24,7 @@ function submitForm(event) {
     monthlySpan.innerHTML = `${totalMonthlyCost.toFixed(2)}`;
     //! parseFloat(var.toFixed(2)); will round to the second decimal place, as indicated by the (2)
     //! parseFloat is needed to keep it a number, otherwise
-    //! .toFixed(2) will do that same thing, but turn it into a string instead
+    //! .toFixed(2) by itself will do that same thing, but turn it into a string instead
     employeeDiv.innerHTML += `
         <tr>
             <td>${lastName}</td>
@@ -62,8 +62,8 @@ function deleteRow(event) {
     // displays the totalMonthlyCost onto the DOM
     monthlySpan.innerHTML = `${totalMonthlyCost.toFixed(2)}`;
 
-    // checks to see if removing the employee will lower totalMonthlyCost
-    // this will change color back if ocndition is met
+    // checks to see if removing the employee will lower totalMonthlyCost below 20000 threshhold
+    // this will change color back if condition is met
     if (totalMonthlyCost <= 20000) {
         //! setting color to "transparent" or "initial" will clear the color to its default state"
         monthlyDiv.style.backgroundColor = "initial";
