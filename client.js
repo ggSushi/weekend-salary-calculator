@@ -62,7 +62,7 @@ function deleteRow(event) {
 
     // checks to see if removing the employee will lower totalMonthlyCost
     // this will change color back if ocndition is met
-    if (totalMonthlyCost < 20000) {
+    if (totalMonthlyCost <= 20000) {
         //! setting color to "transparent" or "initial" will clear the color to its default state"
         monthlyDiv.style.backgroundColor = "initial";
         monthlyDiv.style.color = "initial";
