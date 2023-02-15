@@ -6,6 +6,10 @@ body {
     padding: 0;
 }
 
+h2 {
+    text-align: center;
+}
+
 header {
     font-style: italic;
     text-align: center;
@@ -14,10 +18,18 @@ header {
     padding: 6px 32px;
 }
 
-#formDiv, #total-monthly {
+#total-monthly {
+    font-size: x-large;
     max-width: 700px;
     margin: auto;
     text-align: center;
+}
+
+#formDiv {
+    max-width: 700px;
+    padding-right: 170px;
+    margin: auto;
+    text-align: right;
 }
 
 #employee-table {
@@ -41,4 +53,17 @@ thead {
 
 #employee-table tr:hover {
     background-color: #ddd;
+}
+
+input[type=text],
+input[type=number],
+input[type=date],
+select {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
