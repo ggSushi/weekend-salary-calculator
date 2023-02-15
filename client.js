@@ -23,6 +23,8 @@ function submitForm(event) {
     // This .innerHTML will append the totalMonthlyCost to the <p> tag inside the #total-monthly div
     monthlySpan.innerHTML = `${totalMonthlyCost.toFixed(2)}`;
     //! parseFloat(var.toFixed(2)); will round to the second decimal place, as indicated by the (2)
+    //! parseFloat is needed to keep it a number, otherwise
+    //! .toFixed(2) will do that same thing, but turn it into a string instead
     employeeDiv.innerHTML += `
         <tr>
             <td>${lastName}</td>
