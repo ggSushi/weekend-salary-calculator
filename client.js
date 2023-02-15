@@ -44,4 +44,8 @@ function submitForm(event) {
 // This function will delete the row and subtract from the total monthly cost
 function deleteRow(event) {
     event.target.parentElement.parentElement.remove();
+    if (totalMonthlyCost < 20000) {
+        // setting color to "transparent will clear the color to its default state"
+        monthlyDiv.style.backgroundColor = "transparent";
+    }
 }
