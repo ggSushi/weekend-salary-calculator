@@ -1,7 +1,9 @@
 console.log(`Wassup World?!`);
 // Global Variables
 let totalMonthlyCost = 1666.67;
-let monthlySpan = document.querySelector('.total-monthly');
+let monthlySpan = document.querySelector('.starting-monthly');
+let monthlyDiv = document.querySelector('#total-monthly');
+
 
 // function to pull information from user input on submit
 function submitForm(event) {
@@ -28,8 +30,9 @@ function submitForm(event) {
             <td>${parseFloat(monthlyCost.toFixed(2))}</td>
             <td><button id="delete-button" onclick="deleteRow(event)" >Delete</button></td>
         </tr>
-    `
-    if (monthlyCost > 20000) {
-        
+    `  
+    if (totalMonthlyCost > 20000) {
+        monthlyDiv.style.backgroundColor = "red";
     }
 }
+
